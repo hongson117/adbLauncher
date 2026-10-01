@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/app_icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AdbLauncher - FPT Play Box"
+                    android:textColor="@color/text_white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mở khóa Developer Options &amp; Kích hoạt ADB 5555"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#1E293B"
+                android:padding="8dp"
+                android:text="v1.0.0"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- ADB Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/border_card"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvAdbStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍 Đang kiểm tra cổng ADB 5555..."
+                    android:textColor="@color/accent_orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAdbInstruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lệnh kết nối từ máy tính: adb connect 192.168.1.174:5555"
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btnOpenDevOptions"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/accent_green"
+            android:focusable="true"
+            android:text="⚡ 1. MỞ TÙY CHỌN NHÀ PHÁT TRIỂN (BẬT ADB / USB DEBUGGING)"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOpenAbout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/primary"
+            android:focusable="true"
+            android:text="📱 2. MỞ GIỚI THIỆU THIẾT BỊ (BẤM 7 LẦN 'BẢN DỰNG' NẾU CHƯA MỞ)"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnOpenStockSettings"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#334155"
+            android:focusable="true"
+            android:text="⚙️ 3. MỞ CÀI ĐẶT GỐC ANDROID TV (STOCK SETTINGS)"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnEnableAdbTcp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/accent_purple"
+            android:focusable="true"
+            android:text="🚀 4. KÍCH HOẠT LỆNH MỞ CỔNG ADB NETWORK (CỔNG 5555)"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnCheckAdb"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#1E293B"
+            android:focusable="true"
+            android:text="🔄 5. KIỂM TRA LẠI TRẠNG THÁI CỔNG ADB"
+            android:textColor="@color/primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="6dp"
+            android:text="💡 HƯỚNG DẪN BẬT ADB CHO FPT BOX:\n1. Bấm nút số 1 để mở Tùy chọn nhà phát triển. Nếu mở được, tìm dòng 'Gỡ lỗi USB' (USB Debugging) và BẬT lên.\n2. Nếu chưa mở được mục 1, bấm nút số 2 -> Tìm dòng 'Số bản dựng' (Build Number) -> Bấm OK trên Remote 7 lần liên tiếp -> Quay lại bấm nút số 1.\n3. Khi cổng ADB mở thành công, từ máy tính có thể cài app ngầm 100% không cần xác nhận remote nữa."
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>
